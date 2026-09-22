@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure MVC Demo</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<main class="container">
+  <h1>Secure Java MVC Application</h1>
+  <p>Spring Boot + Spring Security + JPA + browser session.</p>
+
+  <section class="card">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input id="regUser" placeholder="Username" minlength="3" maxlength="80" required>
+      <input id="regPass" type="password" placeholder="Password (8+ characters)" minlength="8" required>
+      <button>Register</button>
+    </form>
+    <p id="registerMsg"></p>
+  </section>
+
+  <section class="card">
+    <h2>Login</h2>
+    <p>Use your registered user or the seeded <code>admin</code> account.</p>
+    <a href="/login">Open Spring Security login</a>
+  </section>
+
+  <section class="card">
+    <h2>Students</h2>
+    <button id="loadStudents">Load students</button>
+    <ul id="students"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Security test</h2>
+    <button id="adminTest">Call admin endpoint</button>
+    <pre id="result"></pre>
+  </section>
+</main>
+<script src="/js/app.js"></script>
+</body>
+</html>
